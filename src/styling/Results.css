@@ -1,16 +1,7 @@
-#portfolio {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 15px;
-}
-
 .pic {
     width: 260px;
-    border-radius: 4px;
-}
-
-h5 {
-    margin: 9px 0;
+    border-radius: 4px 4px 0 0;
+    max-height: 173.3px;
 }
 
 h6 {
@@ -23,8 +14,7 @@ h6 {
     padding: 2px;
 }
 
-h6,
-a {
+h6 > a {
     background-color: #98bdf2;
 }
 
@@ -55,27 +45,12 @@ a {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.title-text {
-    font-weight: 100;
-    font-size: 30px;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-    color: #4d4646;
-    text-decoration: underline #eea737;
-}
-
 .each-result {
     box-shadow: 0px 2px 10px 2px rgb(219, 219, 219);
     border-radius: 0px;
     margin: 30px 0;
     display: block;
     text-align: center;
-    padding-top: 10px;
-}
-
-.result-content {
-    margin: 20px;
 }
 
 @media (min-width: 700px) {

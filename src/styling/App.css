@@ -30,3 +30,21 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
+#page-header{
+    display: block;
+    text-align: center;
+}
+
+.title-text {
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    color: #4d4646;
+    text-decoration: underline #eea737;
+}
+
+.inner-main{
+    margin: 0 auto;
+}

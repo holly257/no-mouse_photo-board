@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 
 function LandingPage() {
     return (
-        <main>
-            <section>Landing Page</section>
-            <section>
-                <h1>Check out our app!</h1>
-                <Link to="/search">Search</Link>
+        <main className="inner-main">
+            <section id="page-header">
+                <h3 className="title-text">Landing Page</h3>
+                <main className="main-body">
+                    <h1>Check out our app!</h1>
+                    <Link to="/search">Search</Link>
+                </main>
             </section>
         </main>
     );

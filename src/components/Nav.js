@@ -6,8 +6,11 @@ function Nav() {
     return (
         <section id="nav-bar">
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/search">Search</Link>
+                <Link className='nav-link' to="/">Home</Link>
+                <div id='nav-right'>
+                    <Link className='nav-link' to="/search">Search</Link>
+                    <Link className='nav-link' to="/saved">Saved</Link>
+                </div>
             </nav>
         </section>
     );

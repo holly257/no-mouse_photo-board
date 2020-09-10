@@ -1,5 +1,5 @@
 import React from 'react';
-import EachResult from './EachResult';
+import EachCard from './EachCard';
 import '../../styling/Results.css';
 
 class ResultsPage extends React.Component {
@@ -10,11 +10,8 @@ class ResultsPage extends React.Component {
         return (
             <main className="main-body">
                 <div className="wrapper">
-                    <div className="gridHead">
-                        <h3 className="title-text">R E S U L T S</h3>
-                    </div>
                     {this.props.hits.map((item, index) => {
-                        return <EachResult key={item.id} {...item} />;
+                        return <EachCard key={item.id} {...item} />;
                     })}
                 </div>
             </main>
