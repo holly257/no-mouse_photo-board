@@ -48,3 +48,9 @@ body {
 .inner-main{
     margin: 0 auto;
 }
+
+.alert{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}

@@ -24,6 +24,19 @@ h6 > a {
     background-color: #98bdf2;
     color: white;
     font-weight: 400;
+    padding: 1px 6px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.results-button button {
+    color: black;
+    text-decoration: none;
+    border: none;
+    background-color: #98bdf2;
+    color: white;
+    padding: 0 6px;
+    font-size: 15px;
+    font-weight: 400;
     font-family: 'Raleway', sans-serif;
 }
 

@@ -1,37 +1,15 @@
 import React from 'react';
 import config from '../config';
+import ApiService from '../api-service';
+import GrowingContext from '../context';
 import ResultsPage from './results/ResultsPage';
 
 class SearchPage extends React.Component {
-    state = {
-        error: null,
-        success: null,
-        results: null,
-    };
-
-    componentDidMount() {
-        const url = `${config.API_ENDPOINT}?key=${config.API_KEY}&image_type=photo&per_page=21`;
-
-        fetch(url, { method: 'get' })
-            .then(res => {
-                if (!res.ok) {
-                    return res.json().then(error => {
-                        throw error;
-                    });
-                }
-                return res.json();
-            })
-            .then(data => {
-                this.setState({ results: data });
-            })
-            .catch(error => {
-                this.setState({ error: 'Sorry, something went wrong. Please try again later.' });
-            });
-    }
+    static contextType = GrowingContext;
 
     submitSearch = e => {
         e.preventDefault();
-        this.setState({ error: null, success: null });
+        this.context.clearError();
 
         const { search } = e.target;
 
@@ -39,25 +17,19 @@ class SearchPage extends React.Component {
             search.value
         )}&image_type=photo&per_page=21`;
 
-        fetch(url, { method: 'get' })
-            .then(res => {
-                if (!res.ok) {
-                    return res.json().then(error => {
-                        throw error;
-                    });
-                }
-                return res.json();
-            })
+        ApiService.getImages(url)
             .then(data => {
-                this.setState({ results: data });
+                if(data.total === 0){
+                    this.context.updateError(`Sorry, we don't have any images for that yet. Try 'dogs' or 'landscape'`)
+                }
+                this.context.updateResults(data);
             })
             .catch(error => {
-                this.setState({ error: 'Sorry, something went wrong. Please try again later.' });
+                this.context.updateError('Sorry, something went wrong. Please try again later.');
             });
     };
 
     render() {
-        const { error, success, results } = this.state;
         return (
             <main className='inner-main'>
                 <section id="page-header">
@@ -76,12 +48,12 @@ class SearchPage extends React.Component {
                             placeholder="Search Images"
                         ></input>
                         <button type="submit">Go</button>
-                        {success && <p className="email_error">{success}</p>}
-                        {error && <p className="email_error">{error}</p>}
+                        
+                        {this.context.error && <p className="alert">{this.context.error}</p>}
                     </form>
                 </section>
                 <section>
-                    <ResultsPage {...results} />
+                    <ResultsPage {...this.context.results} />
                 </section>
             </main>
         );

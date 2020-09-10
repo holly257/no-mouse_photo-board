@@ -1,7 +1,14 @@
 import React from 'react';
+import GrowingContext from '../../context';
 import '../../styling/Results.css';
 
 class EachCard extends React.Component {
+    static contextType = GrowingContext;
+
+    AddCard = e => {
+        this.context.saveNewCard(e.target.value);
+    };
+
     render() {
         return (
             <div className="each-result">
@@ -12,9 +19,20 @@ class EachCard extends React.Component {
 
                     <section className="results-footer">
                         <h6 className="results-button">
-                            <a href={this.props.id} target="_blank" rel="noopener noreferrer">
-                                ADD
-                            </a>
+                            <button
+                                onClick={e => this.AddCard(e)}
+                                value={[
+                                    this.props.id,
+                                    this.props.largeImageURL,
+                                    this.props.previewURL,
+                                    this.props.tags,
+                                    this.props.user,
+                                ]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                SAVE
+                            </button>
                         </h6>
                         <h6 className="results-button">
                             <a

@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { Context } from './context';
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+    <Context>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>{' '}
+    </Context>,
+    document.getElementById('root')
 );
-
