@@ -10,12 +10,20 @@ class EachCard extends React.Component {
         this.context.saveNewCard(e.target.value);
     };
 
+    DeleteCard = e => {
+        this.context.deleteCard(e.target.value);
+    };
+
     addByKey(keyName, e, handle) {
         this.context.saveNewCard(e.target.value);
     }
 
     openTab(keyName, e, handle) {
         window.open(e.target.href, '_blank');
+    }
+
+    deleteByKey(keyName, e, handle) {
+        this.context.deleteCard(e.target.value);
     }
 
     render() {
@@ -57,6 +65,20 @@ class EachCard extends React.Component {
                                 </a>
                             </HotKeys>
                         </h6>
+                        {!this.props.saved ? null : (
+                            <h6 className="results-button">
+                                <HotKeys keyName="shift+d" onKeyDown={this.deleteByKey.bind(this)}>
+                                    <button
+                                        onClick={e => this.DeleteCard(e)}
+                                        value={this.props.id}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        DELETE
+                                    </button>
+                                </HotKeys>
+                            </h6>
+                        )}
                     </section>
                 </div>
             </div>

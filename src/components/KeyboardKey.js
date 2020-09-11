@@ -8,6 +8,7 @@ function KeyboardKey() {
                 <p>Shift+Tab - move back</p>
                 <p>Shift+f - search</p>
                 <p>Shift+s - save a photo</p>
+                <p>Shift+d - delete a saved photo</p>
                 <p>Shift+t - open a photo in a new tab</p>
                 <p>Enter on a nav link - navigate to that page</p>
             </section>

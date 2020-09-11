@@ -20,7 +20,7 @@ class SavedPage extends React.Component {
                         ) : (
                             <div className="wrapper">
                                 {this.context.saved.map((item, index) => {
-                                    return <EachCard key={item.id} {...item} />;
+                                    return <EachCard key={item.id} {...item} saved={true}/>;
                                 })}
                             </div>
                         )}

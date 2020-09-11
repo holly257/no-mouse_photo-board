@@ -22,7 +22,7 @@ class Nav extends Component {
         return (
             <div id="footer-container">
                 <div className="contact-item" id="contact-created-by">
-                    <img id="footer-pic" src="/images/IMG_1973.jpg"></img>
+                    <img id="footer-pic" alt='Holly Rogers' src="/images/IMG_1973.jpg"></img>
                     <section>
                         <p className="footer-text">Created By:</p>
                         <p className="footer-text">Holly Rogers</p>

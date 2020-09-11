@@ -2,6 +2,7 @@ import React from 'react';
 
 const GrowingContext = React.createContext({
     saveNewCard: () => {},
+    deleteCard: () => {},
     updateResults: () => {},
     updateError: () => {},
     clearError: () => {},
@@ -57,6 +58,7 @@ export class Context extends React.Component {
         };
 
         this.saveNewCard = this.saveNewCard.bind(this);
+        this.deleteCard = this.deleteCard.bind(this);
         this.updateResults = this.updateResults.bind(this);
         this.updateError = this.updateError.bind(this);
         this.clearError = this.clearError.bind(this);
@@ -87,6 +89,14 @@ export class Context extends React.Component {
         });
     }
 
+    deleteCard(id) {
+        let currCards = this.state.saved;
+        let newCards = currCards.filter(card => card.id !== id);
+        this.setState({
+            saved: newCards,
+        });
+    }
+
     updateResults(data) {
         this.setState({
             results: data,
@@ -112,6 +122,7 @@ export class Context extends React.Component {
                     ...this.state,
 
                     saveNewCard: this.saveNewCard,
+                    deleteCard: this.deleteCard,
                     updateResults: this.updateResults,
                     updateError: this.updateError,
                     clearError: this.clearError,
