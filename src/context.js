@@ -1,8 +1,6 @@
 import React from 'react';
 
 const GrowingContext = React.createContext({
-    currentChildren: [],
-
     saveNewCard: () => {},
     updateResults: () => {},
     updateError: () => {},
@@ -18,10 +16,9 @@ export class Context extends React.Component {
         this.state = {
             results: null,
             error: null,
-            currentChildren: [],
             saved: [
                 {
-                    id: 5537413,
+                    id: '5537413',
                     largeImageURL:
                         'https://pixabay.com/get/53e5d6444e53af14f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
                     previewURL:
@@ -30,7 +27,7 @@ export class Context extends React.Component {
                     user: 'NickyPe',
                 },
                 {
-                    id: 5544365,
+                    id: '5544365',
                     largeImageURL:
                         'https://pixabay.com/get/53e5d1474954a914f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
                     previewURL:
@@ -39,7 +36,7 @@ export class Context extends React.Component {
                     user: 'mariohagen',
                 },
                 {
-                    id: 5541692,
+                    id: '5541692',
                     largeImageURL:
                         'https://pixabay.com/get/53e5d1424c5bae14f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
                     previewURL:
@@ -48,7 +45,7 @@ export class Context extends React.Component {
                     user: 'Leolo212',
                 },
                 {
-                    id: 1381186,
+                    id: '1381186',
                     largeImageURL:
                         'https://pixabay.com/get/57e3dd424b5aaa14f6da8c7dda793676173bdce255536c48702672d39044c659ba_1280.jpg',
                     previewURL:
@@ -68,17 +65,23 @@ export class Context extends React.Component {
     saveNewCard(data) {
         let cardInfo = data.split(',');
 
+        this.state.saved.map(card => {
+            if (cardInfo[0] === card.id) {
+                cardInfo[0] = this.state.saved.length.toString();
+            }
+        });
+
         let newSavedCard = {
             id: cardInfo[0],
             largeImageURL: cardInfo[1],
             previewURL: cardInfo[2],
             tags: `${cardInfo[3]},${cardInfo[4]},${cardInfo[5]}`,
-            user: cardInfo[6]
-        }
+            user: cardInfo[6],
+        };
 
         let currCards = this.state.saved;
         currCards = [...currCards, newSavedCard];
-        
+
         this.setState({
             saved: currCards,
         });

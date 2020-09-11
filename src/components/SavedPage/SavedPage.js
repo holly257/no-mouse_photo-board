@@ -1,6 +1,7 @@
 import React from 'react';
 import GrowingContext from '../../context';
 import EachCard from '../results/EachCard';
+import KeyboardKey from '../KeyboardKey';
 
 class SavedPage extends React.Component {
     static contextType = GrowingContext;
@@ -9,6 +10,7 @@ class SavedPage extends React.Component {
         return (
             <main className="inner-main">
                 <section id="page-header">
+                    <KeyboardKey />
                     <h3 className="title-text">S A V E D</h3>
                     <main className="main-body">
                         {!this.context.saved ? (
