@@ -24,7 +24,7 @@ Landing Page:
 ![landing page image](/public/images/landing.png)
 <br/>
 Results Page:
-![results page](/images/results.png)
+![results page](/public/images/results.png)
 <br/>
 Saved Page:
-![saved page](/src/images/saved.png)
+![saved page](/public/src/images/saved.png)
