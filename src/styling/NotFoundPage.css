@@ -1,0 +1,11 @@
+.error-main{
+    display: flex;
+    justify-content: center;
+}
+
+#error-page {
+    padding: 20%;
+    font-weight: 100;
+    line-height: 30px;
+    
+}

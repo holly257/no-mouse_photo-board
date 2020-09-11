@@ -7,6 +7,8 @@ import { Route, Switch } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import SearchPage from './components/SearchPage';
 import SavedPage from './components/SavedPage/SavedPage';
+import NotFoundPage from './components/NotFoundPage';
+import Footer from './components/Footer';
 import './styling/App.css';
 
 class App extends React.Component {
@@ -36,8 +38,10 @@ class App extends React.Component {
                         <Route path="/saved">
                             <SavedPage />
                         </Route>
+                        <Route component={NotFoundPage}/>
                     </Switch>
                 </main>
+                <Footer />
             </div>
         );
     }

@@ -32,7 +32,7 @@ function LandingPage() {
                         </span>
                     </div>
                     <KeyboardKey />
-                    <Link className="link" to="/search">
+                    <Link id='get-started' className="link" to="/search">
                         Lets Get Started!
                     </Link>
                 </main>

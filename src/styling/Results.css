@@ -8,20 +8,20 @@ h6 {
     display: inline-block;
     margin: 0 5px 5px 0;
     font-size: 15px;
-    background-color: #98bdf2;
+    background-color: #471fbc;
     outline-style: 1px solid;
     border-radius: 4px;
     padding: 2px;
 }
 
 h6 > a {
-    background-color: #98bdf2;
+    background-color: #471fbc;
 }
 
 .results-button a {
     color: black;
     text-decoration: none;
-    background-color: #98bdf2;
+    background-color: #471fbc;
     color: white;
     font-weight: 400;
     padding: 1px 6px;
@@ -32,7 +32,7 @@ h6 > a {
     color: black;
     text-decoration: none;
     border: none;
-    background-color: #98bdf2;
+    background-color: #471fbc;
     color: white;
     padding: 0 6px;
     font-size: 15px;
@@ -46,7 +46,7 @@ h6 > a {
     color: #222831;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    text-decoration: underline #98bdf2;
+    text-decoration: underline #bcabf0;
 }
 
 .image-tags {
