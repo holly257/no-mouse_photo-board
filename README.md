@@ -23,8 +23,8 @@ Landing Page:
 <br/>
 ![landing page image](/public/images/landing.png)
 <br/>
-Results Page:
-![results page](/public/images/results.png)
+Search Page:
+![search page](/public/images/search.png)
 <br/>
 Saved Page:
-![saved page](/public/src/images/saved.png)
+![saved page](/public/images/saved.png)
