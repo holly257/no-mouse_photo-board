@@ -1,5 +1,6 @@
 import React from 'react';
-import GrowingContext from '../../context';import HotKeys from 'react-hot-keys';
+import GrowingContext from '../../context';
+import HotKeys from 'react-hot-keys';
 import '../../styling/Results.css';
 
 class EachCard extends React.Component {

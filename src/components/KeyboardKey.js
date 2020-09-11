@@ -2,19 +2,16 @@ import React from 'react';
 
 function KeyboardKey() {
     return (
-        <main className="main-body" id='key-main'>
-            <section id="key-hints">
-                <p>Helpful Keys:</p>
-                <ul>
-                    <li>Tab - move to next</li>
-                    <li>Shift+Tab - move back</li>
-                    <li>Shift+f - search</li>
-                    <li>Shift+s - save a photo</li>
-                    <li>Shift+t - open a photo in a new tab</li>
-                    <li>Enter on a nav link - navigate to that page</li>
-                </ul>
+        <div id="key-main">
+            <section id="key-inner">
+                <p>Tab - move to next</p>
+                <p>Shift+Tab - move back</p>
+                <p>Shift+f - search</p>
+                <p>Shift+s - save a photo</p>
+                <p>Shift+t - open a photo in a new tab</p>
+                <p>Enter on a nav link - navigate to that page</p>
             </section>
-        </main>
+        </div>
     );
 }
 

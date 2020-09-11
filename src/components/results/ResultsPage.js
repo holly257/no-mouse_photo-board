@@ -7,10 +7,9 @@ class ResultsPage extends React.Component {
         return (
             <main className="main-body">
                 {!this.props.hits ? (
-                    <p className='alert'>loading...</p>
+                    <p className="alert">loading...</p>
                 ) : (
                     <div className="wrapper">
-                        
                         {this.props.hits.map((item, index) => {
                             return <EachCard key={item.id} {...item} />;
                         })}

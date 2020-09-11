@@ -1,4 +1,4 @@
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,13 +17,4 @@ nav{
     width: 100%;
     font-size: 18px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-}
-
-.nav-link{
-    color: black;
-    padding: 0 10px;
-}
-
-.nav-link:hover{
-    text-decoration: underline #eea737;
 }

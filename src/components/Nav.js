@@ -6,15 +6,15 @@ function Nav() {
     return (
         <section id="nav-bar">
             <nav>
-                <Link className="nav-link" to="/">
+                <Link className="link" to="/">
                     Home
                 </Link>
 
                 <div id="nav-right">
-                    <Link className="nav-link" to="/search">
+                    <Link className="link" to="/search">
                         Search
                     </Link>
-                    <Link className="nav-link" to="/saved">
+                    <Link className="link" to="/saved">
                         Saved
                     </Link>
                 </div>

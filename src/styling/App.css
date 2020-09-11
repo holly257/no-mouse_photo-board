@@ -31,7 +31,7 @@ body {
     height: 100vh;
 }
 
-#page-header{
+#page-header {
     display: block;
     text-align: center;
 }
@@ -45,17 +45,31 @@ body {
     text-decoration: underline #eea737;
 }
 
-.inner-main{
+.inner-main {
     margin: 0 auto;
 }
 
-.alert{
+.alert {
     display: block;
     text-align: center;
     margin-top: 30px;
 }
 
-#key-hints{
-    margin: 50px;
+#key-main {
+    display: flex;
+    justify-content: center;
+}
+
+#key-inner {
+    margin: 50px 0;
     text-align: left;
+}
+
+.link {
+    color: black;
+    padding: 0 10px;
+}
+
+.link:hover {
+    text-decoration: underline #eea737;
 }
