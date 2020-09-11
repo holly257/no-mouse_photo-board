@@ -21,10 +21,10 @@ HTML, CSS, JavaScript, React, React HotKeys
 
 Landing Page:
 <br/>
-![landing page image](images/landing.png)
+![landing page image](/src/images/landing.png)
 <br/>
 Results Page:
-![results page](images/results.png)
+![results page](/src/images/results.png)
 <br/>
 Saved Page:
-![saved page](images/saved.png)
+![saved page](/src/images/saved.png)
