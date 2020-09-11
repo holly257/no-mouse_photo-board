@@ -59,6 +59,10 @@ li {
     margin-right: 20px;
 }
 
+#footer-key{
+    display: none;
+}
+
 @media (min-width: 700px) {
     .footer-text{
         font-size: 20px;
@@ -66,6 +70,11 @@ li {
 
     #footer-container {
         padding: 10px 50px;
+    }
+
+    #footer-key{
+        display: initial;
+        font-size: 15px;
     }
 }
 
