@@ -10,8 +10,8 @@ class ResultsPage extends React.Component {
                     <p className="alert">loading...</p>
                 ) : (
                     <div className="wrapper">
-                        {this.props.hits.map((item, index) => {
-                            return <EachCard key={item.id} {...item} />;
+                        {this.props.hits.map(item => {
+                            return <EachCard key={item.id} {...item} saved={false} />;
                         })}
                     </div>
                 )}

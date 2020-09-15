@@ -19,40 +19,40 @@ export class Context extends React.Component {
             error: null,
             saved: [
                 {
-                    id: '5537413',
+                    id: '5563684',
                     largeImageURL:
-                        'https://pixabay.com/get/53e5d6444e53af14f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
+                        'https://pixabay.com/get/53e5d3404c5aa814f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
-                        'https://cdn.pixabay.com/photo/2020/09/02/06/05/lake-5537413_150.jpg',
-                    tags: 'lake, mountains, trees',
-                    user: 'NickyPe',
+                        'https://cdn.pixabay.com/photo/2020/09/11/17/01/landscape-5563684_150.jpg',
+                    tags: 'landscape, cave, moon',
+                    user: 'enriquelopezgarre',
                 },
                 {
-                    id: '5544365',
+                    id: '5552326',
                     largeImageURL:
-                        'https://pixabay.com/get/53e5d1474954a914f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
+                        'https://pixabay.com/get/53e5d0414950aa14f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
-                        'https://cdn.pixabay.com/photo/2020/09/04/16/18/mountains-5544365_150.jpg',
-                    tags: 'mountains, summit, meadow',
-                    user: 'mariohagen',
+                        'https://cdn.pixabay.com/photo/2020/09/07/16/35/canyon-5552326_150.jpg',
+                    tags: 'canyon, gorge, perspective',
+                    user: 'Deeezy',
                 },
                 {
-                    id: '5541692',
+                    id: '5555362',
                     largeImageURL:
-                        'https://pixabay.com/get/53e5d1424c5bae14f6da8c7dda793676173bdce255536c48702672d29f4bc551ba_1280.jpg',
+                        'https://pixabay.com/get/53e5d6474953a514f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
-                        'https://cdn.pixabay.com/photo/2020/09/03/15/37/waterscape-5541692_150.jpg',
-                    tags: 'waterscape, flamingos, lagoon',
-                    user: 'Leolo212',
+                        'https://cdn.pixabay.com/photo/2020/09/01/06/00/sky-5534319_150.jpg',
+                    tags: 'sky, clouds, forms',
+                    user: 'enriquelopezgarre',
                 },
                 {
-                    id: '1381186',
+                    id: '5550016',
                     largeImageURL:
-                        'https://pixabay.com/get/57e3dd424b5aaa14f6da8c7dda793676173bdce255536c48702672d39044c659ba_1280.jpg',
+                        'https://pixabay.com/get/53e5d0434a53aa14f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
-                        'https://cdn.pixabay.com/photo/2016/05/09/10/42/weimaraner-1381186_150.jpg',
-                    tags: 'weimaraner, puppy, dog',
-                    user: 'ElvisClooth',
+                        'https://cdn.pixabay.com/photo/2020/09/06/20/13/squirrel-5550016_150.jpg',
+                    tags: 'squirrel, rodent, animal',
+                    user: 'Alexas_Fotos',
                 },
             ],
         };
@@ -91,7 +91,9 @@ export class Context extends React.Component {
 
     deleteCard(id) {
         let currCards = this.state.saved;
+
         let newCards = currCards.filter(card => card.id !== id);
+
         this.setState({
             saved: newCards,
         });

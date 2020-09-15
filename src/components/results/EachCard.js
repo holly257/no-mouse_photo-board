@@ -55,7 +55,7 @@ class EachCard extends React.Component {
                         </h6>
 
                         <h6 className="results-button">
-                            <HotKeys keyName="shift+t" onKeyDown={this.openTab.bind(this)}>
+                            <HotKeys keyName="shift+v" onKeyDown={this.openTab.bind(this)}>
                                 <a
                                     href={this.props.largeImageURL}
                                     target="_blank"
