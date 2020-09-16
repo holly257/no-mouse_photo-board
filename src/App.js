@@ -25,6 +25,11 @@ class App extends React.Component {
             .catch(error => {
                 this.context.updateError('Sorry, something went wrong. Please try again later.');
             });
+
+        let local_cards = JSON.parse(localStorage.getItem('saved_cards'));
+        if (local_cards) {
+            this.context.initializeCardsFromStorage(local_cards);
+        }
     }
 
     render() {
@@ -38,7 +43,7 @@ class App extends React.Component {
                         <Route path="/saved">
                             <SavedPage />
                         </Route>
-                        <Route component={NotFoundPage}/>
+                        <Route component={NotFoundPage} />
                     </Switch>
                 </main>
                 <Footer />

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const GrowingContext = React.createContext({
+    initializeCardsFromStorage: () => {},
     saveNewCard: () => {},
     deleteCard: () => {},
     updateResults: () => {},
@@ -57,6 +58,7 @@ export class Context extends React.Component {
             ],
         };
 
+        this.initializeCardsFromStorage = this.initializeCardsFromStorage.bind(this);
         this.saveNewCard = this.saveNewCard.bind(this);
         this.deleteCard = this.deleteCard.bind(this);
         this.updateResults = this.updateResults.bind(this);
@@ -64,12 +66,18 @@ export class Context extends React.Component {
         this.clearError = this.clearError.bind(this);
     }
 
+    initializeCardsFromStorage(cards) {
+        this.setState({
+            saved: cards,
+        });
+    }
+
     saveNewCard(data) {
         let cardInfo = data.split(',');
 
         this.state.saved.map(card => {
             if (cardInfo[0] === card.id) {
-                cardInfo[0] = this.state.saved.length.toString();
+                cardInfo[0] = cardInfo[0] + this.state.saved.length.toString();
             }
         });
 
@@ -87,6 +95,8 @@ export class Context extends React.Component {
         this.setState({
             saved: currCards,
         });
+
+        localStorage.setItem('saved_cards', JSON.stringify(currCards));
     }
 
     deleteCard(id) {
@@ -97,6 +107,8 @@ export class Context extends React.Component {
         this.setState({
             saved: newCards,
         });
+
+        localStorage.setItem('saved_cards', JSON.stringify(newCards));
     }
 
     updateResults(data) {
@@ -123,6 +135,7 @@ export class Context extends React.Component {
                 value={{
                     ...this.state,
 
+                    initializeCardsFromStorage: this.initializeCardsFromStorage,
                     saveNewCard: this.saveNewCard,
                     deleteCard: this.deleteCard,
                     updateResults: this.updateResults,

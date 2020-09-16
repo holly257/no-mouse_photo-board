@@ -1,30 +1,24 @@
 import React from 'react';
 import GrowingContext from '../../context';
-import HotKeys from 'react-hot-keys';
 import '../../styling/Results.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '../../../node_modules/@fortawesome/free-solid-svg-icons';
 
 class EachCard extends React.Component {
     static contextType = GrowingContext;
+    state = {
+        item_saved: false,
+    };
 
     AddCard = e => {
         this.context.saveNewCard(e.target.value);
+        let saved_state = this.state.item_saved;
+        this.setState({ item_saved: !saved_state });
     };
 
     DeleteCard = e => {
         this.context.deleteCard(e.target.value);
     };
-
-    addByKey(keyName, e, handle) {
-        this.context.saveNewCard(e.target.value);
-    }
-
-    openTab(keyName, e, handle) {
-        window.open(e.target.href, '_blank');
-    }
-
-    deleteByKey(keyName, e, handle) {
-        this.context.deleteCard(e.target.value);
-    }
 
     render() {
         return (
@@ -35,48 +29,47 @@ class EachCard extends React.Component {
                     <p className="image-tags">{this.props.tags}</p>
 
                     <section className="results-footer">
+                        {this.state.item_saved ? (
+                            <FontAwesomeIcon className="save-icon" icon={faCheckCircle} />
+                        ) : (
+                            ''
+                        )}
                         <h6 className="results-button">
-                            <HotKeys keyName="shift+s" onKeyDown={this.addByKey.bind(this)}>
-                                <button
-                                    onClick={e => this.AddCard(e)}
-                                    value={[
-                                        this.props.id,
-                                        this.props.largeImageURL,
-                                        this.props.previewURL,
-                                        this.props.tags,
-                                        this.props.user,
-                                    ]}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    SAVE
-                                </button>
-                            </HotKeys>
+                            <button
+                                onClick={e => this.AddCard(e)}
+                                value={[
+                                    this.props.id,
+                                    this.props.largeImageURL,
+                                    this.props.previewURL,
+                                    this.props.tags,
+                                    this.props.user,
+                                ]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                SAVE
+                            </button>
                         </h6>
 
                         <h6 className="results-button">
-                            <HotKeys keyName="shift+v" onKeyDown={this.openTab.bind(this)}>
-                                <a
-                                    href={this.props.largeImageURL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    VIEW
-                                </a>
-                            </HotKeys>
+                            <a
+                                href={this.props.largeImageURL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VIEW
+                            </a>
                         </h6>
                         {!this.props.saved ? null : (
                             <h6 className="results-button">
-                                <HotKeys keyName="shift+d" onKeyDown={this.deleteByKey.bind(this)}>
-                                    <button
-                                        onClick={e => this.DeleteCard(e)}
-                                        value={this.props.id}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        DELETE
-                                    </button>
-                                </HotKeys>
+                                <button
+                                    onClick={e => this.DeleteCard(e)}
+                                    value={this.props.id}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    DELETE
+                                </button>
                             </h6>
                         )}
                     </section>
