@@ -31,7 +31,6 @@ span {
 
 @media (min-width: 1200px) {
     .hero {
-        margin: 50px 0;
         display: flex;
         flex-direction: row;
     }
