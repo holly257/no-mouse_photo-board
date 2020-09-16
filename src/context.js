@@ -21,8 +21,6 @@ export class Context extends React.Component {
             saved: [
                 {
                     id: '5563684',
-                    largeImageURL:
-                        'https://pixabay.com/get/53e5d3404c5aa814f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
                         'https://cdn.pixabay.com/photo/2020/09/11/17/01/landscape-5563684_150.jpg',
                     tags: 'landscape, cave, moon',
@@ -30,8 +28,6 @@ export class Context extends React.Component {
                 },
                 {
                     id: '5552326',
-                    largeImageURL:
-                        'https://pixabay.com/get/53e5d0414950aa14f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
                         'https://cdn.pixabay.com/photo/2020/09/07/16/35/canyon-5552326_150.jpg',
                     tags: 'canyon, gorge, perspective',
@@ -39,8 +35,6 @@ export class Context extends React.Component {
                 },
                 {
                     id: '5555362',
-                    largeImageURL:
-                        'https://pixabay.com/get/53e5d6474953a514f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
                         'https://cdn.pixabay.com/photo/2020/09/01/06/00/sky-5534319_150.jpg',
                     tags: 'sky, clouds, forms',
@@ -48,8 +42,6 @@ export class Context extends React.Component {
                 },
                 {
                     id: '5550016',
-                    largeImageURL:
-                        'https://pixabay.com/get/53e5d0434a53aa14f6da8c7dda793676173bdce255536c48732f7bd59449cc59bf_1280.jpg',
                     previewURL:
                         'https://cdn.pixabay.com/photo/2020/09/06/20/13/squirrel-5550016_150.jpg',
                     tags: 'squirrel, rodent, animal',

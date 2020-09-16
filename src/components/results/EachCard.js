@@ -53,7 +53,7 @@ class EachCard extends React.Component {
 
                         <h6 className="results-button">
                             <a
-                                href={this.props.largeImageURL}
+                                href={this.props.largeImageURL || this.props.previewURL}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
